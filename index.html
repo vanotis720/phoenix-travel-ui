@@ -9,42 +9,54 @@
     <link href="./src/css/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-slate-50 px-32">
+<body class="bg-slate-50 px-5 lg:px-32">
     <header class="h-screen">
-        <nav class="flex justify-between items-center my-8">
+        <nav class="flex justify-between items-center flex-wrap p-2 lg:p-6 lg:my-8">
             <img class="h-12" src="https://irphoenixtravel.com/public/assets/img/logo/text_logo_removebg.png"
                 alt="logo phoenix">
-            <ul class="flex font-medium text-lg">
-                <li class="mr-10 hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">Home</a>
-                </li>
-                <li class="mr-10 hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">Universities</a>
-                </li>
-                <li class="mr-10 hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">How to Apply ?</a>
-                </li>
-                <li class="mr-10 hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">Blog</a>
-                </li>
-                <li class="mr-10 hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">About</a>
-                </li>
-                <li class="hover:border-b-4 hover:border-indigo-500">
-                    <a class="hover:text-indigo-500" href="#">Contact</a>
-                </li>
-            </ul>
-            <a href="#"
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-indigo-800 border-indigo-800
+                    hover:text-indigo-500 hover:border-indigo-500">
+                    <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
+                <ul class="py-5 lg:py-0 font-medium text-sm lg:text-lg lg:flex-grow bg-slate-50 w-full">
+                    <li class="lg:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">Home</a>
+                    </li>
+                    <li class="lg:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">Universities</a>
+                    </li>
+                    <li class="lg:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">How to Apply ?</a>
+                    </li>
+                    <li class="lg:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">Blog</a>
+                    </li>
+                    <li class="lg:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">About</a>
+                    </li>
+                    <li class="hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-lg" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="hidden lg:flex" href="#"
                 class="bg-indigo-500 hover:bg-indigo-800 h-12 px-16 flex items-center justify-center rounded-xl">
                 <span class="text-white font-bold">Login</span>
             </a>
+
         </nav>
         <div class="flex justify-between mt-10 h-4/5">
-            <div class="w-2/3 flex flex-col justify-center">
-                <h1 class="text-8xl capitalize hover:text-indigo-900">
+            <div class="lg:w-2/3 flex flex-col justify-center">
+                <h1 class="text-2xl lg:text-8xl capitalize hover:text-indigo-900">
                     apply to <br> all universities <br> in North Cyprus
                 </h1>
-                <p class="text-xl my-5 text-gray-500 font-medium hover:text-indigo-900">
+                <p class="text-sm lg:text-xl my-5 text-gray-500 font-medium hover:text-indigo-900">
                     We Provide A Free Platform For Students To Search, Discover, And Apply To All Universities In North
                     Cyprus. Our Goal Is To Streamline The Application Process And Facilitate Communication Between
                     Universities And Students.
@@ -82,8 +94,8 @@
                     </div>
                 </form>
             </div>
-            <div
-                class="w-1/3 bg-gradient-to-r from-slate-50 to-indigo-500 rounded-full flex justify-center hover:shadow-2xl hover:shadow-indigo-100">
+            <div class="w-1/3 bg-gradient-to-r from-slate-50 to-indigo-500 rounded-full hidden lg:flex justify-center
+                hover:shadow-2xl hover:shadow-indigo-100">
                 <img class="" src="https://posrednik24.com/wp-content/uploads/2022/11/Traveller-1.svg"
                     alt="home banner">
             </div>
@@ -237,7 +249,7 @@
         </section>
         <section class="my-24 h-1/2">
             <div class="relative w-full" data-carousel="static">
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="relative h-56 overflow-hidden rounded-lg lg:h-96">
                     <div class="hidden duration-700 ease-in-out px-64 border-slate-200 flex flex-col justify-center items-center"
                         data-carousel-item="active">
                         <div class="flex">
@@ -525,7 +537,7 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h4 class="text-2xl text-white font-bold mb-3"> Phoenix Travel</h4>
-                    <p class="text-sm text-white font-light sm:w-1/3">
+                    <p class="text-sm text-white font-light lg:w-1/3">
                         We Provide A Free Platform For Students To Search, Discover, And Apply To All Universities In
                         North Cyprus. Our Goal Is To Streamline The Application Process And Facilitate Communication
                         Between Universities And Students.
@@ -594,6 +606,18 @@
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                var navContent = document.getElementById('nav-content');
+                if (navContent.classList.contains('hidden')) {
+                    navContent.classList.remove('hidden');
+                } else {
+                    navContent.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "repository": "https://github.com/vanotis720/phoenix-travel-ui.git",
+  "author": "vander makadi <vanotis720@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

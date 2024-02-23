@@ -1231,6 +1231,11 @@ video {
     margin-bottom: 2rem;
   }
 
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1273,6 +1278,10 @@ video {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
   }
 
   .md\:w-1\/2 {

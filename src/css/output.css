@@ -556,10 +556,6 @@ video {
   border-width: 0;
 }
 
-.static {
-  position: static;
-}
-
 .absolute {
   position: absolute;
 }
@@ -625,11 +621,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -662,6 +653,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -672,10 +667,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
 }
 
 .block {
@@ -751,16 +742,8 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .w-1\/2 {
   width: 50%;
-}
-
-.w-1\/3 {
-  width: 33.333333%;
 }
 
 .w-10 {
@@ -793,14 +776,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-20 {
-  width: 5rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .flex-grow {
@@ -961,16 +936,8 @@ video {
   --tw-gradient-to: #6366f1 var(--tw-gradient-to-position);
 }
 
-.to-transparent {
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
 .fill-current {
   fill: currentColor;
-}
-
-.fill-white {
-  fill: #fff;
 }
 
 .fill-indigo-500 {
@@ -979,6 +946,10 @@ video {
 
 .fill-indigo-800 {
   fill: #3730a3;
+}
+
+.fill-white {
+  fill: #fff;
 }
 
 .p-1 {
@@ -1040,19 +1011,31 @@ video {
   text-align: center;
 }
 
+.font-roboto-slab {
+  font-family: "Roboto Slab", serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-mukta {
+  font-family: "Mukta", sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-lg {
@@ -1258,6 +1241,11 @@ video {
     margin: 1.25rem;
   }
 
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
@@ -1266,11 +1254,6 @@ video {
   .md\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
-
-  .md\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
   }
 
   .md\:mb-0 {
@@ -1309,6 +1292,10 @@ video {
     height: 80%;
   }
 
+  .md\:h-96 {
+    height: 24rem;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -1317,8 +1304,8 @@ video {
     height: 100%;
   }
 
-  .md\:h-96 {
-    height: 24rem;
+  .md\:h-screen {
+    height: 100vh;
   }
 
   .md\:w-1\/2 {
@@ -1425,6 +1412,10 @@ video {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-start {
+    text-align: start;
   }
 
   .md\:text-8xl {

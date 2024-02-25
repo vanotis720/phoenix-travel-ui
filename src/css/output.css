@@ -1774,6 +1774,14 @@ video {
     margin-top: 6rem;
   }
 
+  .md\:mb-1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1928,6 +1936,11 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:hover\:mr-1:hover {

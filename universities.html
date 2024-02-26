@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Application to univerisities | Phoenix Travel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./src/css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 px-5 md:px-32 font-mukta">
+    <header class="h-auto">
+        <nav class="flex justify-between items-center flex-wrap p-2 md:p-6 md:my-8">
+            <img class="h-12" src="https://irphoenixtravel.com/public/assets/img/logo/text_logo_removebg.png"
+                alt="logo phoenix">
+            <div class="block md:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-indigo-800 border-indigo-800
+                    hover:text-indigo-500 hover:border-indigo-500">
+                    <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow md:w-auto hidden md:flex" id="nav-content">
+                <ul
+                    class="md:flex justify-center md:items-center py-5 md:py-0 font-medium text-sm md:text-xl md:flex-grow bg-slate-50 w-full">
+                    <li class="md:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="index.html">Home</a>
+                    </li>
+                    <li class="md:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="#">Universities</a>
+                    </li>
+                    <li class="md:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="#">How to Apply ?</a>
+                    </li>
+                    <li class="md:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="#">Blog</a>
+                    </li>
+                    <li class="md:mr-10 hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="#">About</a>
+                    </li>
+                    <li class="hover:border-b-4 hover:border-indigo-500">
+                        <a class="hover:text-indigo-500 text-md" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="signin.html"
+                    class="flex md:hidden bg-indigo-500 h-12 px-16 items-center justify-center rounded-xl">
+                    <span class="text-white font-bold">Login</span>
+                </a>
+            </div>
+            <a href="signin.html" class="hidden md:flex bg-indigo-500 md:hover:bg-indigo-800 h-12 px-16 items-center justify-center
+                rounded-xl">
+                <span class="text-white font-bold">Login</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!-- featured university -->
+        <section class="mb-8">
+            <div class="md:flex md:justify-between mb-8">
+                <div class="my-12 flex flex-col justify-center items-center m-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" xml:space="preserve">
+                        <path fill="#282D33"
+                            d="M128 69.886H98.274v-3.98h23.477L111.592 44.15H86.06v-3.979h28.066zM28.987 69.886H0l13.873-29.715h27.33v3.979H16.406L6.25 65.906h22.737zM124.667 108.686H3.334V70.119h3.979v34.587h113.375V70.119h3.979z" />
+                        <path fill="#282D33"
+                            d="M110.361 57.204H17.638L64 24.006l46.361 33.198zm-80.33-3.979h67.937L64 28.901 30.031 53.225z" />
+                        <path fill="#282D33"
+                            d="m38.16 57.182-2.258-3.277L64 34.544l28.097 19.361-2.258 3.277L64 39.376zM100.638 108.686H27.362V65.294h3.98v39.412h65.316V65.294h3.98z" />
+                        <path fill="#282D33"
+                            d="M127.671 117.952H.329v-13.246h127.342v13.246zM4.309 113.973h119.383v-5.287H4.309v5.287zM104.242 66.078H23.758v-12.86h80.484v12.86zm-76.505-3.979h72.525v-4.901H27.737v4.901zM62.011 10.048h3.979v16.105h-3.979z" />
+                        <path fill="#282D33"
+                            d="M86.78 26.776H64.039v-3.979h16.63l-1.27-2.873 1.27-2.87H66.441v-3.98H86.78l-3.03 6.85zM50.61 105.495h-3.979V84.139c0-1.602-1.295-2.905-2.886-2.905-1.592 0-2.887 1.304-2.887 2.905v21.356h-3.979V84.139c0-3.796 3.08-6.885 6.866-6.885 3.785 0 6.865 3.089 6.865 6.885v21.356zM70.434 105.495h-3.979V84.139c0-1.602-1.294-2.905-2.885-2.905-1.592 0-2.886 1.304-2.886 2.905v21.356h-3.979V84.139c0-3.796 3.08-6.885 6.865-6.885 3.784 0 6.864 3.089 6.864 6.885v21.356zM90.259 105.495H86.28V84.139c0-1.602-1.294-2.905-2.885-2.905s-2.886 1.304-2.886 2.905v21.356H76.53V84.139c0-3.796 3.079-6.885 6.865-6.885 3.785 0 6.864 3.089 6.864 6.885v21.356zM11.548 77.949h3.979v6.434h-3.979zM19.758 77.949h3.979v6.434h-3.979zM11.548 87.601h3.979v6.434h-3.979zM19.758 87.601h3.979v6.434h-3.979z" />
+                        <g>
+                            <path fill="#282D33"
+                                d="M104.263 77.949h3.979v6.434h-3.979zM112.475 77.949h3.979v6.434h-3.979z" />
+                        </g>
+                        <g>
+                            <path fill="#282D33"
+                                d="M104.263 87.601h3.979v6.434h-3.979zM112.475 87.601h3.979v6.434h-3.979z" />
+                        </g>
+                        <g>
+                            <path fill="#282D33" d="M60.84 46.588h3.979v4.423H60.84z" />
+                        </g>
+                    </svg>
+
+                    <h3 class="text-5xl font-bold font-roboto text-center">Our partner universities</h3>
+                    <span class="mt-5 font-light text-lg">
+                        A Compilation Of Outstanding Universities Known For Exceptional Support For International
+                        Students
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_813_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Cyprus international university</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            More than 22,000 students from 110 different countries come together at CIU.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_790_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Near East University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Educate students who can have their own stories written by their nations and countries.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_783_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Eastern Mediterranean University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Having been providing higher education in TRNC since 1979 with all programs accredited.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_783_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Eastern Mediterranean University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Having been providing higher education in TRNC since 1979 with all programs accredited.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_783_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Eastern Mediterranean University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Having been providing higher education in TRNC since 1979 with all programs accredited.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_783_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Eastern Mediterranean University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Having been providing higher education in TRNC since 1979 with all programs accredited.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+                <div class="mb-5 md:mb-0 shadow-md hover:shadow-2xl w-auto rounded-2xl p-1">
+                    <img class="rounded-2xl w-full h-auto"
+                        src="https://dashboard.irphoenixtravel.com/public/storage/images/picture/media_783_2.jpg"
+                        alt="university cover image">
+                    <div class="m-5">
+                        <h1 class="text-xl font-bold capitalize font-roboto">Eastern Mediterranean University</h1>
+                        <p class="text-gray-500 font-bold">Cyprus</p>
+                        <p class="text-gray-600">
+                            Having been providing higher education in TRNC since 1979 with all programs accredited.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 m-5 gap-8">
+                        <a class="flex justify-center items-center h-12 bg-indigo-500 w-full text-white font-medium text-lg rounded-lg hover:bg-indigo-800"
+                            href="#">Visit</a>
+                        <a class="flex justify-center items-center h-11 outline outline-indigo-500 w-full text-indigo-500 font-medium text-lg rounded-lg hover:bg-indigo-800 hover:text-white hover:outline-none"
+                            href="#">Apply here</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- stats -->
+        <section class="my-10">
+            <div class="flex flex-col items-center justify-center mb-8 mt-14">
+                <h3 class="mb-3 text-4xl font-bold text-center capitalize font-roboto">why trust applywithphoenix</h3>
+                <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="140.63932" height="50.23866"
+                    viewBox="0 0 70.63932 25.23866" creator="Katerina Limpitsouni">
+                    <path
+                        d="M2.41072,7.75929c17.02568-.71364,34.05136-1.42727,51.07704-2.14091l14.70022-.61616-.6646-4.9107c-12.91114,2.24931-25.50153,6.02077-37.59863,11.04984-1.14989,.47804-1.99105,1.41114-1.79075,2.743,.18277,1.21528,1.18621,2.16637,2.45535,2.1677,3.4797,.00364,6.85119,.81258,9.99116,2.3105v-4.31735c-1.72999,.82125-3.65929,1.50251-5.2661,2.545-1.85577,1.20401-2.56038,3.57856-1.73346,5.61093,.99904,2.45541,3.31379,2.88317,5.70214,3.03169,3.21346,.19982,3.20156-4.80092,0-5-.42704-.02655-.86602-.10566-1.29319-.10946-.13576-.00121,.18317,.04243,.17324,.1348-.03856,.35884-.0895-.27388,.03982,.08986,.16194,.45549,.043-.29009,.0075,.15826-.02632,.33249-.53569,.38661,.03405,.1632,.2588-.10148,.50866-.24147,.75941-.3605,1.36673-.64881,2.73345-1.29761,4.10018-1.94642,1.63647-.77686,1.63166-3.53897,0-4.31735-3.94824-1.8835-8.12283-2.98855-12.51475-2.99314l.6646,4.9107c12.09709-5.02907,24.68748-8.80052,37.59863-11.04984,2.7805-.4844,2.12863-5.02778-.6646-4.9107C51.16231,.71586,34.13662,1.42949,17.11094,2.14313L2.41072,2.75929c-3.20582,.13437-3.22276,5.13508,0,5h0Z"
+                        origin="undraw" /></svg>
+            </div>
+            <div class="md:flex justify-between">
+                <div
+                    class="mb-3 md:mb-0 flex flex-col justify-center items-center bg-white hover:shadow-2xl hover:shadow-indigo-100 mr-10 rounded-xl border border-slate-300 w-full py-10">
+                    <span class="text-4xl hover:text-6xl text-indigo-500 font-bold mb-3">150+</span>
+                    <span class="text-gray-500 font-bold">accommodations</span>
+                </div>
+                <div class="mb-3 md:mb-0 flex flex-col justify-center items-center bg-white hover:shadow-2xl hover:shadow-indigo-100
+                    mr-10 rounded-xl border border-slate-300 w-full py-10">
+                    <span class="text-4xl hover:text-6xl text-indigo-500 font-bold mb-3">24+</span>
+                    <span class="text-gray-500 font-bold">languages</span>
+                </div>
+                <div class="mb-3 md:mb-0 flex flex-col justify-center items-center bg-white hover:shadow-2xl hover:shadow-indigo-100
+                    mr-10 rounded-xl border border-slate-300 w-full py-10">
+                    <span class="text-4xl hover:text-6xl text-indigo-500 font-bold mb-3">45+</span>
+                    <span class="text-gray-500 font-bold">Universities</span>
+                </div>
+                <div class="mb-3 md:mb-0 flex flex-col justify-center items-center bg-white hover:shadow-2xl hover:shadow-indigo-100
+                    rounded-xl border border-slate-300 w-full py-10">
+                    <span class="text-4xl hover:text-6xl text-indigo-500 font-bold mb-3">200+</span>
+                    <span class="text-gray-500 font-bold">Applications</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer
+            class="flex flex-col justify-between bg-indigo-500 md: md:h-96 rounded-xl p-12 my-8 border-b-8 border-yellow-500">
+            <div class="md:flex justify-between items-center">
+                <div>
+                    <h4 class="text-2xl text-white font-bold mb-3 font-roboto"> Phoenix Travel</h4>
+                    <p class="text-sm text-white font-light md:w-1/3">
+                        We Provide A Free Platform For Students To Search, Discover, And Apply To All Universities In
+                        North Cyprus. Our Goal Is To Streamline The Application Process And Facilitate Communication
+                        Between Universities And Students.
+                    </p>
+                </div>
+                <div class="my-5 md:my-0 md:flex justify-between text-white font-normal text-md md:w-1/3">
+                    <div class="flex flex-col mr-24">
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="universities.html">Home</a>
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="#">Universities</a>
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="#">How to Apply ?</a>
+                    </div>
+                    <div class="flex flex-col">
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="#">Blog</a>
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="#">About</a>
+                        <a class="hover:text-gray-800 hover:underline mb-3" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex justify-between items-center border-t py-5">
+                <span class="text-white">© 2024 Phoenix travel. All rights reserved.</span>
+                <div class="flex items-center my-5 md:my-0">
+                    <a href="https://wa.me/905338213675" target="_blank">
+                        <svg class="w-5 h-5 fill-white hover:fill-[#25D366] mr-5" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>WhatsApp</title>
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/irphoenix_travel_agency/" target="_blank">
+                        <svg class="w-5 h-5 fill-white hover:fill-[#E4405F] mr-5" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/irphoenixtravel?t=9tT2xoDpzIHMv2IfU88f2w&s=08" target="_blank">
+                        <svg class="w-5 h-5 fill-white hover:fill-[#000000] mr-5" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>X</title>
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@phoenix_travel_agency" target="_blank">
+                        <svg class="w-5 h-5 fill-white hover:fill-[#000000] mr-5" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>TikTok</title>
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/100285826140691/posts/pfbid029UfEYwKHLYo5uQopJcufz116wMhA6dnKqskUrCdT58DFP5PMERV6Zpfezu8JN4v6l/"
+                        target="_blank">
+                        <svg class="w-6 h-6 fill-white hover:fill-[#000000] mr-5" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <title>Facebook</title>
+                            <path
+                                d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                var navContent = document.getElementById('nav-content');
+                if (navContent.classList.contains('hidden')) {
+                    navContent.classList.remove('hidden');
+                } else {
+                    navContent.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
